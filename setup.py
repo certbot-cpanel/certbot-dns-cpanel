@@ -33,7 +33,8 @@ setup(
     ],
     keywords='certbot letsencrypt cpanel dns-01 plugin',
     install_requires=[
-        'certbot',
+        'certbot<=1.32,>=0.40',
+        'acme<=1.32, >=0.40',
         'zope.interface',
     ],
     entry_points={
