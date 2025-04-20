@@ -230,6 +230,11 @@ class _CPanelClient:
          :param int fullchain_path:
          """
 
+        default_subdomains = ['autodiscover', 'cpanel', 'cpcalendars', 'cpcontacts', 'mail', 'webdisk', 'webmail']
+        _, cpanel_name = self._get_zone_and_name(record_domain)
+        if cpanel_name in default_subdomains:
+            return
+
         data = self.data.copy()
         data['cpanel_jsonapi_module'] = 'SSL'
         data['cpanel_jsonapi_func'] = 'installssl'

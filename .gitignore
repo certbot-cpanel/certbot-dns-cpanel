@@ -134,3 +134,16 @@ credentials.ini
 
 # ---> Intellij IDEs
 /.idea
+
+# Local certbot files and folders
+# These are created when running certbot with
+#   `certbot --work-dir . --config-dir . --logs-dir . ...`
+accounts/
+archive/
+backups/
+csr/
+keys/
+live/
+renewal/
+renewal-hooks/
+letsencrypt.log*
